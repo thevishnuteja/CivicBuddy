@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CivicBuddy Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    main {
+      text-align: center;
+      margin-top: 50px;
+    }
+    df-messenger {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to CivicBuddy</h1>
+  <p>Report local issues easily with our chatbot assistant</p>
+</header>
+
+<main>
+  <p>Click on the chatbot icon in the bottom-right corner to start.</p>
+</main>
+
+<!-- Dialogflow Messenger Integration -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="CivicBuddy"
+  agent-id="9c653e24-0072-4bb8-9be3-70150bfa1c97"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>
