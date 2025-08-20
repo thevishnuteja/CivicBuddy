@@ -68,9 +68,8 @@
     language-code="en">
   </df-messenger>
 
-  <!-- Custom Script (Image Upload Example Placeholder) -->
+  <!-- Custom Script (Optional: send image URL to bot if needed) -->
   <script>
-    // Example function to send an image URL to Dialogflow (placeholder logic)
     function sendImageToDialogflow(imageUrl) {
       try {
         const dfMessenger = document.querySelector("df-messenger");
@@ -80,7 +79,7 @@
         input.value = imageUrl;
         input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
       } catch (e) {
-        alert("Upload failed: " + e);
+        console.error("Send failed:", e);
       }
     }
   </script>
